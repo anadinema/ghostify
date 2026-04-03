@@ -1,0 +1,3 @@
+[submodule "spotify-player"]
+	path = spotify-player
+	url = https://github.com/aome510/spotify-player.git
