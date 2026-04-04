@@ -1,6 +1,7 @@
-name: ci-release
+name: ci-main-release
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - 'v*'
