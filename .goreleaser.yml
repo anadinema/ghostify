@@ -46,10 +46,8 @@ homebrew_casks:
       name: homebrew-tap
       token: "{{ .Env.TAP_GITHUB_TOKEN }}"
     homepage: "https://github.com/anadinema/ghostify"
-    description: "ghostify — spotify-player TUI with proper macOS app bundle integration"
-    # Both binaries are in the archive
+    description: "ghostify — wrap on spotify-player with proper macos app integration"
     binaries: [ "ghost-spot", "ghostify" ]
-    # Remove macOS quarantine (binaries are not notarized) and run install
     hooks:
       post:
         install: |
