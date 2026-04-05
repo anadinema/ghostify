@@ -26,7 +26,8 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - uses: extractions/setup-just@v3
+      - name: setup-just
+        uses: extractions/setup-just@v3
         with:
           just-version: '1.46.0'
 
@@ -62,7 +63,8 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - uses: extractions/setup-just@v3
+      - name: setup-just
+        uses: extractions/setup-just@v3
         with:
           just-version: '1.46.0'
 
