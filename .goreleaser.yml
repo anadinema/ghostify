@@ -55,10 +55,15 @@ homebrew_casks:
             system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/ghost-spot"]
             system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/ghostify"]
           end
+        uninstall: |
+          system_command "/usr/bin/rm", args: ["-rf", "~/Applications/Ghostify.app"]
     url:
       verified: github.com/anadinema/ghostify
     caveats: |
-      Run setup to configure spotify_player and set your device name:
+      To complete setup, run one of:
         ghost-spot setup --preset work
         ghost-spot setup --preset personal
         ghost-spot setup --device-name "My Custom Name"
+
+      This creates ~/Applications/Ghostify.app for macOS integration (AltTab, media keys).
+      The app bundle is hidden from Spotlight automatically.
