@@ -56,7 +56,7 @@ homebrew_casks:
             system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/ghostify"]
           end
         uninstall: |
-          system_command "/usr/bin/rm", args: ["-rf", "~/Applications/Ghostify.app"]
+          system_command "/bin/rm", args: ["-rf", "~/Applications/Ghostify.app"]
     url:
       verified: github.com/anadinema/ghostify
     caveats: |
